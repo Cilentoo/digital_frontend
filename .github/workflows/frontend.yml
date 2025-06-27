@@ -20,17 +20,13 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20.x' # Use a versão do Node.js que você está usando (ex: 20.x)
+        node-version: '20.x'
 
     - name: Install dependencies
-      run: npm ci # 'npm ci' é mais rápido e confiável para CI/CD do que 'npm install'
-      working-directory: advocacia-digital-frontend # Altere para o caminho da sua pasta frontend
+      run: npm ci
 
     - name: Build project
       run: npm run build
-      working-directory: advocacia-digital-frontend # Altere para o caminho da sua pasta frontend
 
-    - name: Run tests # Adicione seus comandos de teste aqui, se tiver
+    - name: Run tests
       run: echo "No tests defined yet for React Frontend."
-      # run: npm test
-      # working-directory: advocacia-digital-frontend
